@@ -1,73 +1,107 @@
-# Welcome to your Lovable project
+# AVishqaar Insights
 
-## Project info
+A modern web application built with React, TypeScript, and Tailwind CSS, featuring an Apple-inspired design.
 
-**URL**: https://lovable.dev/projects/871b231e-3b4e-4adb-a907-173a5f225cfa
+## Features
 
-## How can I edit this code?
+- **Modern Design**: Apple-style minimal design with clean typography
+- **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
+- **Smooth Navigation**: Seamless scrolling between sections
+- **Interactive Components**: Built with shadcn/ui components
+- **TypeScript**: Full type safety throughout the application
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **Frontend**: React 18 with TypeScript
+- **Styling**: Tailwind CSS with custom Apple-inspired design tokens
+- **UI Components**: shadcn/ui component library
+- **Build Tool**: Vite for fast development and building
+- **Routing**: React Router for navigation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/871b231e-3b4e-4adb-a907-173a5f225cfa) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (version 18 or higher)
+- npm or yarn package manager
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository:
+```bash
+git clone https://github.com/En5id3/AVishqaar.git
+cd AVishqaar
+```
 
-Follow these steps:
+2. Install dependencies:
+```bash
+npm install
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and navigate to `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
 
-**Use GitHub Codespaces**
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn/ui components
+│   ├── Header.tsx      # Navigation header
+│   ├── Hero.tsx        # Hero section
+│   ├── Solutions.tsx   # Solutions showcase
+│   ├── About.tsx       # About section
+│   ├── Contact.tsx     # Contact form
+│   └── Footer.tsx      # Footer component
+├── pages/              # Page components
+│   ├── Index.tsx       # Home page
+│   ├── Blog.tsx        # Blog listing
+│   ├── Careers.tsx     # Careers page
+│   └── NotFound.tsx    # 404 page
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── main.tsx           # Application entry point
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Available Scripts
 
-## What technologies are used for this project?
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-This project is built with:
+## Design System
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The application uses a custom design system inspired by Apple's design principles:
 
-## How can I deploy this project?
+- **Typography**: SF Pro Display font family
+- **Colors**: Clean grays with accent colors
+- **Spacing**: Consistent 8px grid system
+- **Animations**: Smooth transitions and micro-interactions
 
-Simply open [Lovable](https://lovable.dev/projects/871b231e-3b4e-4adb-a907-173a5f225cfa) and click on Share -> Publish.
+## Deployment
 
-## Can I connect a custom domain to my Lovable project?
+The application can be deployed to any static hosting service:
 
-Yes, you can!
+- **Vercel**: Connect your GitHub repository for automatic deployments
+- **Netlify**: Drag and drop the `dist` folder after building
+- **GitHub Pages**: Use GitHub Actions for automated deployment
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Contributing
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For questions or support, please contact us at contact@avishqaar.com

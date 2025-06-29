@@ -128,6 +128,18 @@ const SinglePageApp = () => {
               description: "Automated diagnosis system for medical imaging, detecting anomalies in X-rays, MRIs, and CT scans with 95% accuracy.",
               image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
               technologies: ["PyTorch", "DICOM", "React", "FastAPI"]
+            },
+            {
+              name: "Quality Control System",
+              description: "Real-time defect detection in manufacturing lines using computer vision to identify product flaws and ensure quality standards.",
+              image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=250&fit=crop",
+              technologies: ["YOLO", "Raspberry Pi", "Node.js", "MongoDB"]
+            },
+            {
+              name: "Security Surveillance AI",
+              description: "Intelligent video surveillance system with facial recognition, anomaly detection, and real-time threat assessment capabilities.",
+              image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=250&fit=crop",
+              technologies: ["OpenCV", "DeepFace", "Flask", "Redis"]
             }
           ]
         },
@@ -141,6 +153,86 @@ const SinglePageApp = () => {
               description: "AI-powered document processing system that extracts key information, summarizes content, and answers questions about uploaded documents.",
               image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop",
               technologies: ["GPT-4", "LangChain", "Vector DB", "Streamlit"]
+            },
+            {
+              name: "Customer Support Chatbot",
+              description: "Intelligent chatbot for e-commerce platforms that handles customer queries, order tracking, and product recommendations with 24/7 availability.",
+              image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&h=250&fit=crop",
+              technologies: ["Rasa", "BERT", "PostgreSQL", "Docker"]
+            },
+            {
+              name: "Sentiment Analysis Platform",
+              description: "Real-time social media monitoring tool that analyzes brand sentiment across multiple platforms and provides actionable insights.",
+              image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
+              technologies: ["NLTK", "Kafka", "Elasticsearch", "Kibana"]
+            },
+            {
+              name: "Legal Document Analyzer",
+              description: "AI system for legal firms that analyzes contracts, identifies key clauses, and flags potential risks or compliance issues.",
+              image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=250&fit=crop",
+              technologies: ["spaCy", "Transformers", "Django", "PostgreSQL"]
+            }
+          ]
+        },
+        {
+          title: "AI Automation",
+          description: "Intelligent process automation for businesses",
+          image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+          projects: [
+            {
+              name: "Invoice Processing System",
+              description: "Automated invoice processing using AI to extract data, validate information, and integrate with accounting systems, reducing processing time by 80%.",
+              image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=250&fit=crop",
+              technologies: ["OCR", "RPA", "SAP", "Power Automate"]
+            },
+            {
+              name: "HR Recruitment Bot",
+              description: "AI-driven recruitment automation that screens resumes, schedules interviews, and ranks candidates based on job requirements.",
+              image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop",
+              technologies: ["spaCy", "Selenium", "Azure ML", "REST API"]
+            },
+            {
+              name: "Supply Chain Optimizer",
+              description: "Intelligent supply chain management system that predicts demand, optimizes inventory levels, and automates procurement decisions.",
+              image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=250&fit=crop",
+              technologies: ["Prophet", "Airflow", "Tableau", "AWS Lambda"]
+            },
+            {
+              name: "Email Classification System",
+              description: "Automated email sorting and response system that categorizes incoming emails, prioritizes urgent messages, and generates draft responses.",
+              image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=400&h=250&fit=crop",
+              technologies: ["BERT", "FastAPI", "Redis", "Celery"]
+            }
+          ]
+        },
+        {
+          title: "Predictive AI",
+          description: "AI models for forecasting and prediction",
+          image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
+          projects: [
+            {
+              name: "Market Trend Predictor",
+              description: "Advanced AI system that analyzes market data, news sentiment, and economic indicators to predict stock price movements and market trends.",
+              image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=250&fit=crop",
+              technologies: ["LSTM", "Transformer", "Alpha Vantage API", "TensorFlow"]
+            },
+            {
+              name: "Weather Impact Analyzer",
+              description: "AI model that predicts weather impact on business operations, helping companies optimize logistics and resource allocation.",
+              image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=250&fit=crop",
+              technologies: ["Random Forest", "Weather API", "Scikit-learn", "Plotly"]
+            },
+            {
+              name: "Customer Churn Predictor",
+              description: "Machine learning system that identifies customers likely to churn and recommends retention strategies based on behavioral patterns.",
+              image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=250&fit=crop",
+              technologies: ["XGBoost", "Feature Engineering", "MLflow", "Streamlit"]
+            },
+            {
+              name: "Energy Consumption Forecaster",
+              description: "AI-powered energy management system that predicts consumption patterns and optimizes energy usage for smart buildings.",
+              image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&h=250&fit=crop",
+              technologies: ["Prophet", "IoT Sensors", "InfluxDB", "Grafana"]
             }
           ]
         }
@@ -162,6 +254,117 @@ const SinglePageApp = () => {
               description: "Advanced time series analysis to predict sales trends, seasonal patterns, and revenue projections with 92% accuracy for retail chains.",
               image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
               technologies: ["Prophet", "XGBoost", "Pandas", "Plotly"]
+            },
+            {
+              name: "Equipment Maintenance Predictor",
+              description: "Predictive maintenance system for industrial equipment that forecasts failures and optimizes maintenance schedules.",
+              image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=250&fit=crop",
+              technologies: ["Random Forest", "IoT Sensors", "InfluxDB", "Grafana"]
+            },
+            {
+              name: "Demand Planning System",
+              description: "ML-powered demand forecasting for supply chain optimization, reducing inventory costs by 30% while maintaining service levels.",
+              image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=250&fit=crop",
+              technologies: ["ARIMA", "Seasonal Decompose", "Apache Spark", "Tableau"]
+            },
+            {
+              name: "Risk Assessment Model",
+              description: "Financial risk prediction system that evaluates loan default probability and investment risks using advanced ML algorithms.",
+              image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=250&fit=crop",
+              technologies: ["Logistic Regression", "Ensemble Methods", "SHAP", "MLflow"]
+            }
+          ]
+        },
+        {
+          title: "Recommendation Systems",
+          description: "Personalized content and product recommendations",
+          image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
+          projects: [
+            {
+              name: "E-commerce Recommender",
+              description: "Collaborative filtering system for online marketplace that increases conversion rates by 35% through personalized product recommendations.",
+              image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
+              technologies: ["Apache Spark", "MLlib", "Redis", "Kafka"]
+            },
+            {
+              name: "Content Discovery Engine",
+              description: "AI-powered content recommendation for streaming platforms that analyzes user behavior and preferences to suggest relevant content.",
+              image: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=400&h=250&fit=crop",
+              technologies: ["TensorFlow", "Collaborative Filtering", "AWS", "DynamoDB"]
+            },
+            {
+              name: "News Personalization System",
+              description: "Machine learning system that curates personalized news feeds based on reading history, preferences, and trending topics.",
+              image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=250&fit=crop",
+              technologies: ["Matrix Factorization", "NLP", "Elasticsearch", "React"]
+            },
+            {
+              name: "Job Matching Platform",
+              description: "AI-driven job recommendation system that matches candidates with suitable positions based on skills, experience, and preferences.",
+              image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop",
+              technologies: ["Word2Vec", "Cosine Similarity", "Django", "PostgreSQL"]
+            }
+          ]
+        },
+        {
+          title: "Fraud Detection",
+          description: "Advanced security and anomaly detection",
+          image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop",
+          projects: [
+            {
+              name: "Banking Fraud Detection",
+              description: "Real-time fraud detection system for financial transactions using machine learning to identify suspicious patterns and prevent losses.",
+              image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop",
+              technologies: ["Isolation Forest", "Apache Kafka", "Elasticsearch", "Kibana"]
+            },
+            {
+              name: "Insurance Claim Analyzer",
+              description: "Automated insurance claim processing that detects fraudulent claims using pattern recognition and anomaly detection algorithms.",
+              image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=250&fit=crop",
+              technologies: ["XGBoost", "SMOTE", "Flask", "PostgreSQL"]
+            },
+            {
+              name: "Credit Card Fraud Monitor",
+              description: "Real-time credit card transaction monitoring system that flags suspicious activities and prevents unauthorized transactions.",
+              image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=400&h=250&fit=crop",
+              technologies: ["Neural Networks", "Apache Storm", "Redis", "MongoDB"]
+            },
+            {
+              name: "Identity Verification System",
+              description: "Multi-factor identity verification using biometric analysis, document verification, and behavioral pattern recognition.",
+              image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400&h=250&fit=crop",
+              technologies: ["Computer Vision", "OCR", "Biometric APIs", "FastAPI"]
+            }
+          ]
+        },
+        {
+          title: "Classification Models",
+          description: "Advanced classification and categorization systems",
+          image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+          projects: [
+            {
+              name: "Medical Diagnosis Assistant",
+              description: "AI classification system that assists doctors in diagnosing diseases based on symptoms, medical history, and test results.",
+              image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
+              technologies: ["Support Vector Machine", "Feature Selection", "Scikit-learn", "Flask"]
+            },
+            {
+              name: "Quality Control Classifier",
+              description: "Automated product quality classification system for manufacturing that categorizes products based on visual and sensor data.",
+              image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=250&fit=crop",
+              technologies: ["Convolutional Neural Network", "OpenCV", "TensorFlow", "Docker"]
+            },
+            {
+              name: "Sentiment Classification Engine",
+              description: "Advanced sentiment analysis system that classifies customer feedback, reviews, and social media posts into detailed emotion categories.",
+              image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
+              technologies: ["BERT", "Transformer", "Hugging Face", "Streamlit"]
+            },
+            {
+              name: "Document Category Classifier",
+              description: "Intelligent document classification system that automatically categorizes and routes documents based on content and structure.",
+              image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop",
+              technologies: ["Naive Bayes", "TF-IDF", "spaCy", "Django"]
             }
           ]
         }
@@ -183,6 +386,117 @@ const SinglePageApp = () => {
               description: "Comprehensive business intelligence platform providing real-time KPI tracking, financial metrics, and operational insights for C-level executives.",
               image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=250&fit=crop",
               technologies: ["Power BI", "SQL Server", "Azure", "DAX"]
+            },
+            {
+              name: "Marketing Analytics Suite",
+              description: "Multi-channel marketing performance tracker that consolidates data from various platforms and provides attribution analysis.",
+              image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
+              technologies: ["Google Analytics API", "Tableau", "Python", "BigQuery"]
+            },
+            {
+              name: "Sales Performance Monitor",
+              description: "Real-time sales analytics platform that tracks team performance, pipeline health, and revenue forecasting with interactive visualizations.",
+              image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=250&fit=crop",
+              technologies: ["Salesforce API", "D3.js", "Node.js", "MongoDB"]
+            },
+            {
+              name: "Operations Intelligence Hub",
+              description: "Centralized operations dashboard that monitors supply chain, inventory, logistics, and operational efficiency metrics in real-time.",
+              image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=250&fit=crop",
+              technologies: ["Apache Superset", "PostgreSQL", "Apache Airflow", "Docker"]
+            }
+          ]
+        },
+        {
+          title: "Data Visualization",
+          description: "Interactive charts and reporting tools",
+          image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+          projects: [
+            {
+              name: "Healthcare Analytics Portal",
+              description: "Interactive visualization platform for healthcare data analysis, patient outcomes tracking, and resource optimization for hospital management.",
+              image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
+              technologies: ["D3.js", "React", "MongoDB", "Express"]
+            },
+            {
+              name: "Financial Risk Dashboard",
+              description: "Real-time risk monitoring dashboard for financial institutions with interactive charts, stress testing, and regulatory reporting.",
+              image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=250&fit=crop",
+              technologies: ["Plotly", "Dash", "PostgreSQL", "Docker"]
+            },
+            {
+              name: "Customer Journey Visualizer",
+              description: "Interactive customer journey mapping tool that visualizes touchpoints, conversion funnels, and user behavior patterns.",
+              image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=250&fit=crop",
+              technologies: ["Chart.js", "Vue.js", "Firebase", "Google Analytics"]
+            },
+            {
+              name: "Environmental Data Explorer",
+              description: "Comprehensive environmental data visualization platform for tracking climate metrics, pollution levels, and sustainability indicators.",
+              image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=250&fit=crop",
+              technologies: ["Leaflet", "Observable", "Python", "PostGIS"]
+            }
+          ]
+        },
+        {
+          title: "Performance Analytics",
+          description: "Comprehensive performance monitoring",
+          image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
+          projects: [
+            {
+              name: "Website Performance Monitor",
+              description: "Advanced web analytics platform that tracks user behavior, page performance, and conversion funnels with real-time alerts.",
+              image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=400&h=250&fit=crop",
+              technologies: ["Google Analytics", "Mixpanel", "Node.js", "Redis"]
+            },
+            {
+              name: "Manufacturing KPI Tracker",
+              description: "Comprehensive performance monitoring system for manufacturing operations tracking OEE, quality metrics, and production efficiency.",
+              image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=250&fit=crop",
+              technologies: ["InfluxDB", "Grafana", "MQTT", "Time Series DB"]
+            },
+            {
+              name: "Application Performance Monitor",
+              description: "Real-time application monitoring system that tracks performance metrics, error rates, and user experience across distributed systems.",
+              image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=250&fit=crop",
+              technologies: ["Prometheus", "Grafana", "Jaeger", "Kubernetes"]
+            },
+            {
+              name: "Employee Productivity Analytics",
+              description: "Workforce analytics platform that measures productivity, engagement, and performance metrics while ensuring privacy compliance.",
+              image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop",
+              technologies: ["Tableau", "Microsoft Graph API", "Power BI", "Azure"]
+            }
+          ]
+        },
+        {
+          title: "Predictive Analytics",
+          description: "Advanced forecasting and trend analysis",
+          image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+          projects: [
+            {
+              name: "Market Trend Analyzer",
+              description: "Advanced analytics platform that predicts market trends, consumer behavior, and business opportunities using big data and AI.",
+              image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=250&fit=crop",
+              technologies: ["Apache Spark", "Kafka", "Elasticsearch", "Kibana"]
+            },
+            {
+              name: "Customer Lifetime Value Predictor",
+              description: "Predictive analytics system that calculates customer lifetime value and identifies high-value customer segments for targeted marketing.",
+              image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=250&fit=crop",
+              technologies: ["Python", "Scikit-learn", "Jupyter", "PostgreSQL"]
+            },
+            {
+              name: "Inventory Optimization Engine",
+              description: "AI-powered inventory management system that predicts demand patterns and optimizes stock levels to minimize costs and stockouts.",
+              image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=250&fit=crop",
+              technologies: ["Prophet", "XGBoost", "Apache Airflow", "Snowflake"]
+            },
+            {
+              name: "Churn Prediction Dashboard",
+              description: "Customer churn prediction and prevention system with interactive dashboards showing risk scores and recommended retention actions.",
+              image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
+              technologies: ["Random Forest", "Plotly Dash", "MLflow", "Docker"]
             }
           ]
         }
@@ -204,6 +518,117 @@ const SinglePageApp = () => {
               description: "Comprehensive online learning management system with video streaming, progress tracking, and interactive assessments for educational institutions.",
               image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=250&fit=crop",
               technologies: ["React", "Node.js", "PostgreSQL", "AWS S3"]
+            },
+            {
+              name: "Project Management Suite",
+              description: "Collaborative project management platform with task tracking, team communication, and resource allocation for enterprise teams.",
+              image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
+              technologies: ["Vue.js", "Express", "MongoDB", "Socket.io"]
+            },
+            {
+              name: "E-commerce Marketplace",
+              description: "Full-featured e-commerce platform with multi-vendor support, payment processing, inventory management, and analytics dashboard.",
+              image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
+              technologies: ["Next.js", "Stripe API", "Prisma", "Vercel"]
+            },
+            {
+              name: "Healthcare Management System",
+              description: "Comprehensive healthcare platform for patient management, appointment scheduling, medical records, and telemedicine capabilities.",
+              image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
+              technologies: ["Angular", "Spring Boot", "MySQL", "WebRTC"]
+            }
+          ]
+        },
+        {
+          title: "Mobile Development",
+          description: "Cross-platform mobile applications",
+          image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop",
+          projects: [
+            {
+              name: "Healthcare Mobile App",
+              description: "Patient management mobile application with appointment scheduling, medical records access, and telemedicine capabilities.",
+              image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
+              technologies: ["React Native", "Firebase", "AWS Cognito", "GraphQL"]
+            },
+            {
+              name: "Logistics Tracking App",
+              description: "Real-time package tracking and delivery management app for logistics companies with GPS integration and route optimization.",
+              image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=250&fit=crop",
+              technologies: ["Flutter", "Google Maps API", "Node.js", "MySQL"]
+            },
+            {
+              name: "Financial Trading App",
+              description: "Mobile trading platform with real-time market data, portfolio management, and advanced charting tools for retail investors.",
+              image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=250&fit=crop",
+              technologies: ["Swift", "Kotlin", "WebSocket", "Chart.js"]
+            },
+            {
+              name: "Social Fitness App",
+              description: "Social fitness tracking application with workout plans, progress monitoring, community features, and gamification elements.",
+              image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+              technologies: ["React Native", "Redux", "Firebase", "HealthKit"]
+            }
+          ]
+        },
+        {
+          title: "Enterprise Systems",
+          description: "Scalable enterprise software solutions",
+          image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop",
+          projects: [
+            {
+              name: "ERP Integration Platform",
+              description: "Enterprise resource planning system that integrates HR, finance, inventory, and operations with customizable workflows and reporting.",
+              image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop",
+              technologies: ["Java Spring", "Oracle DB", "Microservices", "Kubernetes"]
+            },
+            {
+              name: "Customer Relationship Management",
+              description: "Comprehensive CRM solution with lead management, sales pipeline tracking, and customer communication automation.",
+              image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=250&fit=crop",
+              technologies: ["Salesforce", "Python", "REST APIs", "Heroku"]
+            },
+            {
+              name: "Supply Chain Management System",
+              description: "End-to-end supply chain management platform with vendor management, procurement automation, and logistics optimization.",
+              image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=250&fit=crop",
+              technologies: ["SAP", "ABAP", "HANA", "Fiori"]
+            },
+            {
+              name: "Human Resource Information System",
+              description: "Comprehensive HRIS platform for employee management, payroll processing, performance tracking, and compliance reporting.",
+              image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop",
+              technologies: ["ASP.NET Core", "SQL Server", "Azure AD", "Power Apps"]
+            }
+          ]
+        },
+        {
+          title: "Cloud Solutions",
+          description: "Cloud-native applications and services",
+          image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop",
+          projects: [
+            {
+              name: "Serverless Data Pipeline",
+              description: "Cloud-native data processing pipeline using serverless architecture for real-time data ingestion, transformation, and analytics.",
+              image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=250&fit=crop",
+              technologies: ["AWS Lambda", "Kinesis", "S3", "DynamoDB"]
+            },
+            {
+              name: "Microservices Architecture",
+              description: "Scalable microservices platform with API gateway, service mesh, and container orchestration for enterprise applications.",
+              image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop",
+              technologies: ["Docker", "Kubernetes", "Istio", "Prometheus"]
+            },
+            {
+              name: "Multi-Cloud Management Platform",
+              description: "Unified cloud management platform for deploying and managing applications across multiple cloud providers with cost optimization.",
+              image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=250&fit=crop",
+              technologies: ["Terraform", "Ansible", "Grafana", "Helm"]
+            },
+            {
+              name: "Cloud Security Suite",
+              description: "Comprehensive cloud security platform with threat detection, compliance monitoring, and automated incident response capabilities.",
+              image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=250&fit=crop",
+              technologies: ["AWS Security Hub", "CloudTrail", "GuardDuty", "Lambda"]
             }
           ]
         }

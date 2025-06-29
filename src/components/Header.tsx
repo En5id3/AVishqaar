@@ -1,104 +1,139 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
 
-  const navItems = [
-    { name: "Home", href: "#home", isInternal: true },
-    { name: "Solutions", href: "#solutions", isInternal: true },
-    { name: "About", href: "#about", isInternal: true },
-    { name: "Careers", href: "/careers", isInternal: false },
-    { name: "Blog", href: "/blog", isInternal: false },
-    { name: "Contact", href: "#contact", isInternal: true },
-  ];
-
-  const handleNavClick = (href: string, isInternal: boolean) => {
-    if (isInternal && location.pathname !== "/") {
-      // If we're not on the home page and clicking an internal link, navigate to home first
-      window.location.href = "/" + href;
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMenuOpen(false);
+  };
+
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
-    <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              AVishKaar
-            </Link>
-          </div>
+    <header className="fixed top-0 left-0 right-0 z-50 apple-nav">
+      <div className="apple-container">
+        <div className="flex items-center justify-between h-16 px-4">
+          {/* Logo */}
+          <Link to="/" className="text-2xl font-semibold text-gray-900">
+            AVishqaar
+          </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:block">
-            <div className="flex items-center space-x-8">
-              {navItems.map((item) => (
-                item.isInternal ? (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
-                    onClick={() => handleNavClick(item.href, item.isInternal)}
-                  >
-                    {item.name}
-                  </a>
-                ) : (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
-                    onClick={() => handleNavClick(item.href, item.isInternal)}
-                  >
-                    {item.name}
-                  </Link>
-                )
-              ))}
-            </div>
+          <nav className="hidden md:flex items-center space-x-8">
+            <button 
+              onClick={() => scrollToSection('solutions')}
+              className="text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium"
+            >
+              Solutions
+            </button>
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium"
+            >
+              About
+            </button>
+            <Link 
+              to="/blog" 
+              className="text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium"
+            >
+              Blog
+            </Link>
+            <Link 
+              to="/careers" 
+              className="text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium"
+            >
+              Careers
+            </Link>
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium"
+            >
+              Contact
+            </button>
           </nav>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {/* CTA Button */}
+          <div className="hidden md:block">
+            <Button className="apple-button" onClick={scrollToContact}>
+              Get Started
             </Button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? (
+              <X className="w-6 h-6 text-gray-900" />
+            ) : (
+              <Menu className="w-6 h-6 text-gray-900" />
+            )}
+          </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
-              {navItems.map((item) => (
-                item.isInternal ? (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
-                    onClick={() => handleNavClick(item.href, item.isInternal)}
-                  >
-                    {item.name}
-                  </a>
-                ) : (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
-                    onClick={() => handleNavClick(item.href, item.isInternal)}
-                  >
-                    {item.name}
-                  </Link>
-                )
-              ))}
-            </div>
+          <div className="md:hidden bg-white border-t border-gray-200">
+            <nav className="px-4 py-6 space-y-4">
+              <button 
+                onClick={() => {
+                  scrollToSection('solutions');
+                  setIsMenuOpen(false);
+                }}
+                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium w-full text-left"
+              >
+                Solutions
+              </button>
+              <button 
+                onClick={() => {
+                  scrollToSection('about');
+                  setIsMenuOpen(false);
+                }}
+                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium w-full text-left"
+              >
+                About
+              </button>
+              <Link 
+                to="/blog" 
+                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blog
+              </Link>
+              <Link 
+                to="/careers" 
+                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Careers
+              </Link>
+              <button 
+                onClick={() => {
+                  scrollToSection('contact');
+                  setIsMenuOpen(false);
+                }}
+                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium w-full text-left"
+              >
+                Contact
+              </button>
+              <div className="pt-4">
+                <Button className="apple-button w-full" onClick={scrollToContact}>
+                  Get Started
+                </Button>
+              </div>
+            </nav>
           </div>
         )}
       </div>

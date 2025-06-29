@@ -1,50 +1,66 @@
-
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section id="home" className="pt-20 pb-16 bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
-          <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
-              <Sparkles size={16} />
-              Transforming Businesses with AI
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-              AI, ML & Analytics
-              <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Solutions
-              </span>
-            </h1>
-            
-            <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-              Empowering enterprises and individuals with cutting-edge AI, Machine Learning, Analytics, and Software Solutions. Transform your business with intelligent automation and data-driven insights.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                Explore Solutions
-                <ArrowRight className="ml-2" size={20} />
-              </Button>
-              <Button variant="outline" size="lg">
-                Get Started
-              </Button>
-            </div>
+    <section className="apple-hero pt-20">
+      <div className="apple-container text-center">
+        <div className="max-w-4xl mx-auto">
+          {/* Main Headline */}
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+            AI Solutions.
+            <br />
+            <span className="text-blue-600">Reimagined.</span>
+          </h1>
+          
+          {/* Subtitle */}
+          <p className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto">
+            Empowering enterprises with cutting-edge AI, Machine Learning, and Analytics. 
+            Transform your business with intelligent automation and data-driven insights.
+          </p>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button 
+              className="apple-button text-lg px-10 py-5"
+              onClick={() => scrollToSection('solutions')}
+            >
+              Explore Solutions
+              <ArrowRight className="ml-2" size={20} />
+            </Button>
+            <Button 
+              className="apple-button-secondary text-lg px-10 py-5"
+              onClick={() => scrollToSection('about')}
+            >
+              Learn More
+            </Button>
           </div>
           
-          <div className="relative">
-            <div className="w-full h-96 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center">
-              <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop" 
-                alt="AI Technology" 
-                className="w-full h-full object-cover rounded-2xl shadow-2xl"
-              />
+          {/* Visual Element */}
+          <div className="mt-20 relative">
+            <div className="w-full max-w-4xl mx-auto h-96 bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl flex items-center justify-center overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50"></div>
+              <div className="relative z-10 text-center">
+                <div className="w-24 h-24 bg-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-2">Intelligent Innovation</h3>
+                <p className="text-gray-600">Powered by advanced AI and machine learning</p>
+              </div>
             </div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-purple-400 to-blue-500 rounded-2xl opacity-20"></div>
-            <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl opacity-20"></div>
+            
+            {/* Floating Elements */}
+            <div className="absolute -top-4 -right-4 w-16 h-16 bg-blue-100 rounded-full opacity-60"></div>
+            <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-purple-100 rounded-full opacity-60"></div>
           </div>
         </div>
       </div>

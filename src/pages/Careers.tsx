@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -48,7 +47,7 @@ const Careers = () => {
             </p>
             <Button 
               size="lg"
-              onClick={() => window.open('mailto:careers@avishkaar.com?subject=General Application&body=Hello,%0D%0A%0D%0AI am interested in opportunities at AVishKaar. Please find my resume attached.%0D%0A%0D%0ABest regards,', '_blank')}
+              onClick={() => window.open('mailto:careers@avishqaar.com?subject=General Application&body=Hello,%0D%0A%0D%0AI am interested in opportunities at AVishqaar. Please find my resume attached.%0D%0A%0D%0ABest regards,', '_blank')}
             >
               Send General Application
             </Button>

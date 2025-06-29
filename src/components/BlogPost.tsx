@@ -43,7 +43,7 @@ const BlogPost = () => {
         <p>Let's build things that are easy to use, easy to change, and easy to love. Choose simplicity. Choose clarity.</p>
       `,
       date: "January 15, 2024",
-      author: "AVishKaar Team",
+      author: "AVishqaar Team",
       readTime: "8 min read",
       category: "AI Trends",
       slug: "future-ai-business-2024",
@@ -77,7 +77,7 @@ const BlogPost = () => {
         <p>Build ML systems that are easy to explain, easy to fix, and easy to scale. Let clarity be your competitive edge.</p>
       `,
       date: "April 20, 2024",
-      author: "AVishKaar Team",
+      author: "AVishqaar Team",
       readTime: "12 min read",
       category: "Machine Learning",
       slug: "ml-best-practices-enterprise",
@@ -111,7 +111,7 @@ const BlogPost = () => {
         <p>Let your analytics empower action, not confusion. Simplicity in insight is the real competitive advantage.</p>
       `,
       date: "July 25, 2024",
-      author: "AVishKaar Team",
+      author: "AVishqaar Team",
       readTime: "6 min read",
       category: "Analytics",
       slug: "data-analytics-actionable-insights",
@@ -145,7 +145,7 @@ const BlogPost = () => {
         <p>Let your cloud strategy empower your business, not slow it down. Build for clarity, scale with confidence.</p>
       `,
       date: "October 12, 2023",
-      author: "AVishKaar Team",
+      author: "AVishqaar Team",
       readTime: "10 min read",
       category: "Cloud Computing",
       slug: "cloud-computing-multi-cloud-strategies",
@@ -179,7 +179,7 @@ const BlogPost = () => {
         <p>Keep your security simple, strong, and human. A safe team is an empowered team.</p>
       `,
       date: "June 28, 2023",
-      author: "AVishKaar Team",
+      author: "AVishqaar Team",
       readTime: "9 min read",
       category: "Cybersecurity",
       slug: "cybersecurity-remote-work",
@@ -213,7 +213,7 @@ const BlogPost = () => {
         <p>Let your DevOps process be a source of confidence, not confusion. Build pipelines that help your team move fast and stay focused.</p>
       `,
       date: "March 15, 2023",
-      author: "AVishKaar Team",
+      author: "AVishqaar Team",
       readTime: "11 min read",
       category: "DevOps",
       slug: "devops-transformation-cicd",
@@ -247,7 +247,7 @@ const BlogPost = () => {
         <p>Let your blockchain projects be models of clarity and trust. Build for real impact, not just buzz.</p>
       `,
       date: "November 30, 2022",
-      author: "AVishKaar Team",
+      author: "AVishqaar Team",
       readTime: "8 min read",
       category: "Blockchain",
       slug: "blockchain-real-world-applications",
@@ -281,7 +281,7 @@ const BlogPost = () => {
         <p>Let your connected systems be a model of clarity and control. Build for the future, but keep it simple.</p>
       `,
       date: "August 18, 2022",
-      author: "AVishKaar Team",
+      author: "AVishqaar Team",
       readTime: "7 min read",
       category: "IoT",
       slug: "iot-edge-computing-future",
@@ -305,7 +305,7 @@ const BlogPost = () => {
         <p>Effective microservices design requires careful API management and service orchestration.</p>
       `,
       date: "May 5, 2022",
-      author: "AVishKaar Team",
+      author: "AVishqaar Team",
       readTime: "12 min read",
       category: "Architecture",
       slug: "microservices-architecture-scaling",
@@ -329,7 +329,7 @@ const BlogPost = () => {
         <p>Organizations must balance agility with control to maximize the benefits of these platforms.</p>
       `,
       date: "January 22, 2022",
-      author: "AVishKaar Team",
+      author: "AVishqaar Team",
       readTime: "6 min read",
       category: "Development",
       slug: "low-code-no-code-platforms",
@@ -365,7 +365,7 @@ const BlogPost = () => {
         <p>Organizations that successfully navigated the pandemic have emerged stronger, with robust digital capabilities that position them for continued growth. The key is to view digital transformation not as a one-time project but as an ongoing journey of adaptation and innovation.</p>
       `,
       date: "October 10, 2021",
-      author: "AVishKaar Team",
+      author: "AVishqaar Team",
       readTime: "9 min read",
       category: "Digital Transformation",
       slug: "digital-transformation-pandemic-lessons",
@@ -389,7 +389,7 @@ const BlogPost = () => {
         <p>Understanding 5G's potential helps businesses prepare for the next wave of digital innovation.</p>
       `,
       date: "June 28, 2021",
-      author: "AVishKaar Team",
+      author: "AVishqaar Team",
       readTime: "8 min read",
       category: "5G Technology",
       slug: "5g-technology-revolutionizing-connectivity",
@@ -413,7 +413,7 @@ const BlogPost = () => {
         <p>Building responsible AI requires collaboration between technologists, policymakers, and society at large.</p>
       `,
       date: "March 15, 2021",
-      author: "AVishKaar Team",
+      author: "AVishqaar Team",
       readTime: "10 min read",
       category: "AI Ethics",
       slug: "ai-ethics-responsible-systems",
@@ -516,7 +516,7 @@ const BlogPost = () => {
             {/* Call to action section */}
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 text-center text-white shadow-2xl">
               <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
-              <p className="text-blue-100 mb-6 text-lg">Let AVishKaar help you implement these strategies and technologies.</p>
+              <p className="text-blue-100 mb-6 text-lg">Let AVishqaar help you implement these strategies and technologies.</p>
               <Button className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-3 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl">
                 Get Started Today
               </Button>

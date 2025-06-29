@@ -289,113 +289,128 @@ export const Solutions = () => {
   };
 
   return (
-    <section id="solutions" className="py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="solutions" className="apple-section bg-gray-50">
+      <div className="apple-container">
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Our Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to drive innovation and growth across industries
+            Comprehensive AI, ML, and Analytics solutions designed to transform your business operations and drive growth.
           </p>
         </div>
 
-        <div className="space-y-20">
-          {solutions.map((category, categoryIndex) => {
-            const Icon = category.icon;
-            return (
-              <div key={category.category} className="space-y-8">
-                <div className="text-center">
-                  <div className="inline-flex items-center gap-3 mb-4">
-                    <div className="p-3 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl">
-                      <Icon className="w-8 h-8 text-blue-600" />
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-                      {category.category}
-                    </h3>
-                  </div>
-                  <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                    {category.description}
-                  </p>
+        {/* Solutions Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {solutions.map((solution, index) => (
+            <div key={index} className="space-y-6">
+              {/* Category Header */}
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <solution.icon className="w-8 h-8 text-white" />
                 </div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+                  {solution.category}
+                </h3>
+                <p className="text-gray-600">
+                  {solution.description}
+                </p>
+              </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {category.items.map((item, itemIndex) => (
-                    <Card 
-                      key={itemIndex} 
-                      className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg cursor-pointer"
-                      onClick={() => handleCardClick(item)}
-                    >
-                      <div className="overflow-hidden rounded-t-lg">
+              {/* Solution Items */}
+              <div className="space-y-4">
+                {solution.items.map((item, itemIndex) => (
+                  <Card 
+                    key={itemIndex} 
+                    className="apple-card cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105"
+                    onClick={() => handleCardClick(item)}
+                  >
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-lg font-semibold text-gray-900">
+                        {item.title}
+                      </CardTitle>
+                      <CardDescription className="text-gray-600">
+                        {item.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="w-full h-32 bg-gray-100 rounded-lg overflow-hidden">
                         <img 
                           src={item.image} 
                           alt={item.title}
-                          className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                          className="w-full h-full object-cover"
                         />
                       </div>
-                      <CardHeader>
-                        <CardTitle className="text-xl font-semibold text-gray-900">
-                          {item.title}
-                        </CardTitle>
-                        <CardDescription className="text-gray-600">
-                          {item.description}
-                        </CardDescription>
-                        <p className="text-sm text-blue-600 mt-2 font-medium">
-                          Click to view sample projects →
-                        </p>
-                      </CardHeader>
-                    </Card>
-                  ))}
-                </div>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
 
-        {/* Sample Projects Modal */}
+        {/* Project Details Dialog */}
         <Dialog open={!!selectedSolution} onOpenChange={() => setSelectedSolution(null)}>
-          <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
+          <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
             <DialogHeader>
-              <DialogTitle className="text-2xl font-bold text-gray-900 mb-2">
-                {selectedSolution?.title} - Sample Projects
+              <DialogTitle className="text-2xl font-semibold text-gray-900">
+                {selectedSolution?.title}
               </DialogTitle>
-              <p className="text-gray-600 mb-6">{selectedSolution?.description}</p>
             </DialogHeader>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {selectedSolution?.projects?.map((project, index) => (
-                <Card key={index} className="shadow-lg">
-                  <div className="overflow-hidden rounded-t-lg">
-                    <img 
-                      src={project.image} 
-                      alt={project.name}
-                      className="w-full h-48 object-cover"
-                    />
+            {selectedSolution && (
+              <div className="space-y-6">
+                <div className="w-full h-64 bg-gray-100 rounded-xl overflow-hidden">
+                  <img 
+                    src={selectedSolution.image} 
+                    alt={selectedSolution.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <p className="text-gray-600 text-lg">
+                  {selectedSolution.description}
+                </p>
+
+                <div>
+                  <h4 className="text-xl font-semibold text-gray-900 mb-4">
+                    Featured Projects
+                  </h4>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {selectedSolution.projects.map((project, projectIndex) => (
+                      <Card key={projectIndex} className="apple-card">
+                        <CardContent className="p-6">
+                          <div className="w-full h-32 bg-gray-100 rounded-lg overflow-hidden mb-4">
+                            <img 
+                              src={project.image} 
+                              alt={project.name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <h5 className="text-lg font-semibold text-gray-900 mb-2">
+                            {project.name}
+                          </h5>
+                          <p className="text-gray-600 text-sm mb-4">
+                            {project.description}
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            {project.technologies.map((tech, techIndex) => (
+                              <span 
+                                key={techIndex}
+                                className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
                   </div>
-                  <CardHeader>
-                    <CardTitle className="text-lg font-semibold text-gray-900">
-                      {project.name}
-                    </CardTitle>
-                    <CardDescription className="text-gray-600">
-                      {project.description}
-                    </CardDescription>
-                    <div className="mt-4">
-                      <p className="text-sm font-medium text-gray-700 mb-2">Technologies Used:</p>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech, techIndex) => (
-                          <span 
-                            key={techIndex}
-                            className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </CardHeader>
-                </Card>
-              ))}
-            </div>
+                </div>
+              </div>
+            )}
           </DialogContent>
         </Dialog>
       </div>

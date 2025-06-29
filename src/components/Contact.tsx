@@ -21,7 +21,7 @@ export const Contact = () => {
     // Create mailto link with form data
     const subject = `Contact from ${formData.name} - ${formData.company}`;
     const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\nMessage:\n${formData.message}`;
-    const mailtoLink = `mailto:contact@avishkaar.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:contact@avishqaar.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     // Open email client
     window.location.href = mailtoLink;
@@ -44,10 +44,10 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="apple-section bg-gray-50">
+      <div className="apple-container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -56,27 +56,28 @@ export const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Information */}
           <div className="space-y-8">
-            <Card className="border-0 shadow-lg">
+            <Card className="apple-card">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-gray-900">
+                <CardTitle className="text-2xl font-semibold text-gray-900">
                   Contact Information
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">Email</div>
-                    <div className="text-gray-600">contact@avishkaar.com</div>
+                    <div className="text-gray-600">contact@avishqaar.com</div>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">Phone</div>
@@ -85,8 +86,8 @@ export const Contact = () => {
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">Location</div>
@@ -97,9 +98,10 @@ export const Contact = () => {
             </Card>
           </div>
 
-          <Card className="border-0 shadow-lg">
+          {/* Contact Form */}
+          <Card className="apple-card">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-gray-900">
+              <CardTitle className="text-2xl font-semibold text-gray-900">
                 Send us a Message
               </CardTitle>
             </CardHeader>
@@ -113,7 +115,7 @@ export const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="h-12"
+                      className="h-12 border-gray-300 focus:border-blue-600 focus:ring-blue-600"
                     />
                   </div>
                   <div>
@@ -124,7 +126,7 @@ export const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="h-12"
+                      className="h-12 border-gray-300 focus:border-blue-600 focus:ring-blue-600"
                     />
                   </div>
                 </div>
@@ -134,7 +136,7 @@ export const Contact = () => {
                   placeholder="Company Name"
                   value={formData.company}
                   onChange={handleChange}
-                  className="h-12"
+                  className="h-12 border-gray-300 focus:border-blue-600 focus:ring-blue-600"
                 />
                 
                 <Textarea
@@ -143,13 +145,12 @@ export const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="min-h-32"
+                  className="min-h-32 border-gray-300 focus:border-blue-600 focus:ring-blue-600"
                 />
                 
                 <Button 
                   type="submit"
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                  className="apple-button w-full text-lg px-8 py-4"
                 >
                   Send Message
                   <Send className="ml-2" size={20} />
